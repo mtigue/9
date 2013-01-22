@@ -1,14 +1,10 @@
 vti_encoding:SR|utf8-nl
-vti_timelastmodified:TR|18 Jan 2013 14:58:04 -0000
-vti_extenderversion:SR|12.0.0.0
 vti_author:SR|web4u\\mtigue
 vti_modifiedby:SR|web4u\\mtigue
-vti_timecreated:TR|16 Jan 2013 22:32:29 -0000
-vti_title:SR|Schantz Insurance Agency
-vti_backlinkinfo:VX|app/9/thanks.html
-vti_nexttolasttimemodified:TW|18 Jan 2013 14:57:56 -0000
-vti_cacheddtm:TX|18 Jan 2013 14:58:04 -0000
-vti_filesize:IR|1524
+vti_timelastmodified:TR|20 Jan 2013 00:20:40 -0000
+vti_timecreated:TR|20 Jan 2013 00:20:40 -0000
+vti_cacheddtm:TX|20 Jan 2013 00:20:40 -0000
+vti_filesize:IR|1521
 vti_cachedtitle:SR|Schantz Insurance Agency
 vti_cachedbodystyle:SR|<body>
 vti_cachedlinkinfo:VX|Q|jquery.mobile-1.2.0.min.css S|jquery-1.8.2.min.js S|jquery.mobile-1.2.0.min.js Q|css/web4u.css S|img/bg.png H|contact.html H|request-certificate.html H|report-claim.html H|what-to-do.html H|request-policy-change.html H|request-quote.html
@@ -19,5 +15,6 @@ vti_cachedhastheme:BR|false
 vti_cachedhasborder:BR|false
 vti_metatags:VR|viewport width=device-width,\\ initial-scale=1
 vti_charset:SR|utf-8
-vti_syncofs_208.109.14.76\:21/schantz:TW|18 Jan 2013 21:44:17 -0000
-vti_syncwith_208.109.14.76\:21/schantz:TX|18 Jan 2013 14:58:04 -0000
+vti_title:SR|Schantz Insurance Agency
+vti_extenderversion:SR|12.0.0.0
+vti_backlinkinfo:VX|

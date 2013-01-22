@@ -62,45 +62,97 @@ Thank you. We received your submission.
 <input type="hidden" name="formName" value="Request a Quote">
 
 
-Name: <br><input type="text" name="actualName"/><br>
-
-
-Business Name: <br><input type="text" name="business"/><br>
+Your Name and/or Your Company Name: <br><input type="text" name="actualName"/><br>
 
 Email: <br><input type="text" name="email"/><br>
 
-Date coverage to begin: <br><input type="text" name="date"/><br>
+Your Location: <br><input type="text" name="location"/><br>
 
-Please describe coverage needed (# of balloons; $ of balloons, # of pilots): <br>
-<textarea name="description">
+Balloon Size: <br><input type="text" name="balloonSize"/><br>
+
+Hours Per Year: <br><input type="text" name="hoursYear"/><br>
+
+Commercial (carrying paying passengers) hours per year: <br><input type="text" name="commercialHours"/><br>
+
+
+
+How many PIC hours do you have?: <br><input type="text" name="picHours"/><br>
+
+
+
+
+
+<!------->
+
+
+<Script> 
+ $(function() {    // Makes sure the code contained doesn't run until
+                  //     all the DOM elements have loaded
+
+    $('#hullInsurance').change(function(){
+        $('.colors').hide();
+        $('#' + $(this).val()).show();
+    });
+
+});</Script>
+
+Any Hull Insurance on the balloon?<br>
+<Select id="hullInsurance" name="hullInsurance" data-mini="true">
+
+   <option value="no">No</option>
+      <option value="yes">Yes</option>
+  
+</Select>
+<div id="yes" class="colors" style="display:none"> How much is the hull insurance? <input type="text" name="hullCost" value="$">  </div>
+
+
+<!---------->
+
+
+<br><br>
+Last Safety Seminar atttended: <br><input type="text" name="lastSeminar"/><br>
+
+
+
+
+
+
+Current Carrier and Premium: <br>
+<textarea name="currentCarrier">
 </textarea>
 <br>
 
 <input id="hide" style="height:50px; font-size:1em;" type="button" value="submit" onClick="sendForm()"/>
 
 </form>
-
-
-
-
 <script>
 
 function sendForm ()
-
  {
-
 var formName=document.forms ["form"] ["formName"].value;
 var actualName=document.forms ["form"] ["actualName"].value;
-var business=document.forms ["form"] ["business"].value;
 var email=document.forms ["form"] ["email"].value;
-var date=document.forms ["form"] ["date"].value;
-var description=document.forms ["form"] ["description"].value;
+
+var location=document.forms ["form"] ["location"].value;
+var balloonSize=document.forms ["form"] ["balloonSize"].value;
+var hoursYear=document.forms ["form"] ["hoursYear"].value;
+var commercialHours=document.forms ["form"] ["commercialHours"].value;
+var picHours=document.forms ["form"] ["picHours"].value;
+
+
+var hullInsurance=document.forms ["form"] ["hullInsurance"].value;
+var hullCost=document.forms ["form"] ["hullCost"].value;
+
+
+
+var lastSeminar=document.forms ["form"] ["lastSeminar"].value;
+var currentCarrier=document.forms ["form"] ["currentCarrier"].value;
+
 
 if (actualName==null || actualName=="")
 {alert ("Please fill out your name");
 return false;
 }
-
 
 var atpos=email.indexOf("@");
 var dotpos=email.lastIndexOf(".");
@@ -110,27 +162,24 @@ if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
   return false;
   }
 
-if (date==null || date=="")
-{alert ("Please fill out the date for the coverage to begin.");
+if (location==null || location=="")
+{alert ("Please fill out your location");
 return false;
 }
 
-if (description==null || description=="")
-{alert ("Please provide a description of the desired coverage.");
+if (balloonSize==null || balloonSize=="")
+{alert ("Please enter the balloon size");
 return false;
 }
 
 
-
-// document.write(name);
-// document.write(business);
-// document.write(email);
-
-
+if (hoursYear==null || hoursYear=="")
+{alert ("Please enter the hours per year");
+return false;
+}
 
 
-$.get( "http://www.theschantzagency.com/app/4/get_form.php", 
-{formName: formName, actualName: actualName, business: business, email: email, date: date, description: description});
+$.get( "http://www.theschantzagency.com/app/get_form.php", {formName: formName, actualName: actualName, email: email, location:location, balloonSize:balloonSize, hoursYear:hoursYear, commercialHours:commercialHours, picHours:picHours, hullInsurance:hullInsurance, hullCost:hullCost, lastSeminar:lastSeminar, currentCarrier:currentCarrier});
 
 setTimeout(function(){ document.location = 'thanks.html';}, 500 );
 

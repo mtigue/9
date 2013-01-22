@@ -24,8 +24,17 @@
 /*    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
+
+.ui-page, .ui-mobile-viewport {
+	background: url(images/tiling_stripes.gif);
+}
+
+
+
 body {
    
+   
+   background-image:url('../images/tiling_stripes.gif') !important; background-repeat:repeat;
 }
 
 /* Portrait layout (default) */
@@ -42,4 +51,4 @@ body {
 
 
 
-.footer {text-align:center; color:#666666; font-size:14px; }
+.footers {text-align:center; color:#666666; font-size:14px; }

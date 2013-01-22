@@ -62,10 +62,7 @@ Thank you. We received your submission.
 <input type="hidden" name="formName" value="Request a Policy Change">
 
 
-Name: <br><input type="text" name="actualName"/><br>
-
-
-Business Name: <br><input type="text" name="business"/><br>
+Your Name and/or Your Company Name: <br><input type="text" name="actualName"/><br>
 
 Email: <br><input type="text" name="email"/><br>
 
@@ -74,8 +71,67 @@ Effective date for change: <br><input type="text" name="date"/><br>
 
 
 
+<!------->
+
+
+<Script> 
+ $(function() {    // Makes sure the code contained doesn't run until
+                  //     all the DOM elements have loaded
+
+    $('#balloonAdd').change(function(){
+        $('.colors').hide();
+        $('#' + $(this).val()).show();
+    });
+
+});</Script>
+
+Are you adding a balloon?<br>
+<Select id="balloonAdd" name="balloonAdd" data-mini="true">
+
+   <option value="no">No</option>
+      <option value="yesBalloon">Yes</option>
+  
+</Select>
+<div id="yesBalloon" class="colors" style="display:none"> Please provide the N Number <input type="text" name="nNumber" value="">  </div>
+<br>
+
+<!---------->
+
+<br>
+
+
+<!------->
+
+
+<Script> 
+ $(function() {    // Makes sure the code contained doesn't run until
+                  //     all the DOM elements have loaded
+
+    $('#pilotAdd').change(function(){
+        $('.pilot').hide();
+        $('#' + $(this).val()).show();
+    });
+
+});</Script>
+
+Are you adding a pilot?<br>
+<Select id="pilotAdd" name="pilotAdd" data-mini="true">
+
+   <option value="no">No</option>
+      <option value="yesPilot">Yes</option>
+  
+</Select>
+<div id="yesPilot" class="pilot" style="display:none"> Please provide pilot name: <input type="text" name="pilotName" value="">  </div>
+<br>
+
+<!---------->
+
+
+<br><br>
+
+
 Please describe the requested changes: <br>
-<textarea name="description">
+<textarea name="requestedChanges">
 </textarea>
 <br>
 
@@ -94,10 +150,16 @@ function sendForm ()
 
 var formName=document.forms ["form"] ["formName"].value;
 var actualName=document.forms ["form"] ["actualName"].value;
-var business=document.forms ["form"] ["business"].value;
 var email=document.forms ["form"] ["email"].value;
 var date=document.forms ["form"] ["date"].value;
-var description=document.forms ["form"] ["description"].value;
+
+
+var balloonAdd=document.forms ["form"] ["balloonAdd"].value;
+var nNumber=document.forms ["form"] ["nNumber"].value;
+var pilotName=document.forms ["form"] ["pilotName"].value;
+var pilotAdd=document.forms ["form"] ["pilotAdd"].value;
+
+var requestedChanges=document.forms ["form"] ["requestedChanges"].value;
 
 if (actualName==null || actualName=="")
 {alert ("Please fill out your name");
@@ -118,22 +180,10 @@ if (date==null || date=="")
 return false;
 }
 
-if (description==null || description=="")
-{alert ("Please provide a description of the change");
-return false;
-}
 
 
-
-// document.write(name);
-// document.write(business);
-// document.write(email);
-
-
-
-
-$.get( "http://www.theschantzagency.com/app/4/get_form.php", 
-{formName: formName, actualName: actualName, business: business, email: email, date: date, description: description});
+$.get( "http://www.theschantzagency.com/app/get_form.php", 
+{formName: formName, actualName: actualName, email: email, pilotAdd:pilotAdd, pilotName:pilotName, balloonAdd:balloonAdd, nNumber:nNumber, date:date, requestedChanges:requestedChanges});
 
 setTimeout(function(){ document.location = 'thanks.html';}, 500 );
 
