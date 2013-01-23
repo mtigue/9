@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.web4uonline"
+        id        = "com.web4uonline.schantz"
         version   = "0.1.0">
-    <name>Schantz Agency</name>
+    <name>Schantz Agency</name> 
 
     <description>
        The Schantz Insurance Agency App allows you to request an insurance certificate, report a claim, request a policy change, and request a quote all from your smartphone. The app also provides guidance on what to do if a claim happens. A very handy app to have on your phone or tablet.
