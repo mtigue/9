@@ -11,11 +11,6 @@
   <script type="text/javascript" src="jquery.validate.js"></script>
 	
 	
-	 <script>
-  $(document).ready(function(){
-    $("#form").validate();
-  });
-  </script>
 	
 	
 </head> 
@@ -92,6 +87,9 @@ Date of Event (if applicable): <br><input type="text" name="date"/><br>
 
 <script>
 
+
+
+
 function sendForm ()
 
  {
@@ -142,23 +140,19 @@ return false;
 }
 
 
-$(document).ready(function(){
-
 $.get( "http://www.theschantzagency.com/app/get_form.php", { formName: formName, whatRequesting:whatRequesting, actualName: actualName, email: email, holderName:holderName, holderAddress:holderAddress, date:date });
 
-
-});
-
-
-alert ("Thank you. We received your message");
+alert ("Thank you. We received your request.");
 
 
 
-window.location = "index.html"
+window.location = "index.html";
 
 
 
 }
+
+
 </script>
 
 
