@@ -19,3 +19,5 @@ vti_cachedhastheme:BR|false
 vti_cachedhasborder:BR|false
 vti_metatags:VR|viewport width=device-width,\\ initial-scale=1
 vti_charset:SR|utf-8
+vti_syncofs_208.109.14.76\:21/schantz:TW|01 Feb 2013 02:25:21 -0000
+vti_syncwith_208.109.14.76\:21/schantz:TX|23 Jan 2013 13:53:09 -0000

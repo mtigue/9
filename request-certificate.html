@@ -142,27 +142,25 @@ return false;
 }
 
 
-
+$(document).ready(function(){
 
 $.get( "http://www.theschantzagency.com/app/get_form.php", { formName: formName, whatRequesting:whatRequesting, actualName: actualName, email: email, holderName:holderName, holderAddress:holderAddress, date:date });
 
-setTimeout(function(){ document.location = 'thanks.html';}, 500 );
 
-// window.location = "thanks.html"
+});
+
+
+alert ("Thank you. We received your message");
+
+
+
+window.location = "index.html"
+
+
 
 }
 </script>
 
-<!--
- $(document).ready(function(){
-  $("#hide").click(function(){
-    $("#form").hide();
-  });
-  $("#hide").click(function(){
-    $("#thanks").show();
-  });
-});
--->
 
 
 		

@@ -11,11 +11,6 @@
   <script type="text/javascript" src="jquery.validate.js"></script>
 	
 	
-	 <script>
-  $(document).ready(function(){
-    $("#form").validate();
-  });
-  </script>
 	
 	
 </head> 
@@ -179,25 +174,28 @@ return false;
 }
 
 
+
+
+$(document).ready(function(){
+ 
+ 
 $.get( "http://www.theschantzagency.com/app/get_form.php", {formName: formName, actualName: actualName, email: email, location:location, balloonSize:balloonSize, hoursYear:hoursYear, commercialHours:commercialHours, picHours:picHours, hullInsurance:hullInsurance, hullCost:hullCost, lastSeminar:lastSeminar, currentCarrier:currentCarrier});
 
-setTimeout(function(){ document.location = 'thanks.html';}, 500 );
 
-// window.location = "thanks.html"
+ });
+
+
+alert ("Thank you. We received your message");
+
+
+
+window.location = "index.html"
+
+
 
 }
 </script>
 
-<!--
- $(document).ready(function(){
-  $("#hide").click(function(){
-    $("#form").hide();
-  });
-  $("#hide").click(function(){
-    $("#thanks").show();
-  });
-});
--->
 
 
 		
