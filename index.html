@@ -673,22 +673,8 @@ var req = $.ajax({
         
 <div class="content">
 
-<div id="thanks" class="hidden">
-
-Thank you. We received your submission. 
-
-</div>
 
 
-
-
-
-<!--   http://www.theschantzagency.com/app/4/get_form.php   -->  
-
-
-
-
-<!--   http://www.theschantzagency.com/app/schantz3/get_form.php   -->  
 
 <form id="quote" name="quote" action="#" method="get">
 
@@ -745,7 +731,7 @@ Any Hull Insurance on the balloon?<br>
 <br><br>
 Last Safety Seminar atttended: <br>
 
-<input name="date" id="date" type="date" data-role="datebox" data-theme="b" 
+<input name="lastSeminar" id="lastSeminar" type="date" data-role="datebox" data-theme="b" 
    data-options='{"mode": "calbox", "useFocus":true}'>
 <br>
 
@@ -840,7 +826,7 @@ function json_success(response) {
 
  if (response == "success")
   {
- //  alert ("Thanks. We received your request.");
+ 
  
 
   apprise ("Thanks. We received your request.");
