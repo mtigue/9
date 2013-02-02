@@ -3,23 +3,51 @@
 <head> 
 	<title>Schantz Insurance Agency</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
 	
-	<script src="jquery-1.8.2.min.js"></script>
-	<script src="jquery.mobile-1.2.0.min.js"></script>
+<!---css links--------------------->	
+	 
+	 <!--
+	 <link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" /> 
+	 -->
+	 
+	<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" href="css/apprise.css" />
 	<link rel="stylesheet" href="css/web4u.css" />
 	
-	
-	<script src="jquery-latest.js"></script>
-  <script type="text/javascript" src="jquery.validate.js"></script>
+	<link rel="stylesheet" href="cal2/jqm-datebox.min.css" />
 	
 	
-	 <script>
-  $(document).ready(function(){
-    $("#form").validate();
-  });
-  </script>
+<!-------------- end css links ---------------------------------->
+		
 
+<!---js calls---------------------------------->	
+	<script src="jquery-1.8.2.min.js"></script>
+	
+	
+	<script>
+		//reset type=date inputs to text
+		$( document ).bind( "mobileinit", function(){
+			$.mobile.page.prototype.options.degradeInputs.date = true;
+		});	
+	</script>
+	
+	
+	
+	<script src="jquery.mobile-1.2.0.min.js"></script>
+	
+	<script src="cal2/jqm-datebox.core.min.js"></script>
+	<script src="cal2/jqm-datebox.mode.calbox.min.js"></script><!--datebox--->
+	
+	<script src="js/apprise-1.5.full.js"></script><!--apprise alert box-->
+	
+	
+	<!-- calendar that shows all the time
+	<script src="jQuery.ui.datepicker.js">  </script>   
+	<script src="jquery.ui.datepicker.mobile.js"></script>
+	-->
+	
+<!--end js--->	
+	
 	
 	
 	
@@ -50,12 +78,12 @@
 <ul data-role="listview" data-inset="true" data-filter="false">
 
 
-	<li><a href="#contact" data-transition="slide">Contact Us</a></li>
-	<li><a href="#request-certificate" data-transition="slide">Request a Certificate</a></li>
-	<li><a href="#report-claim" data-transition="slide">Report a Claim</a></li>
-	<li><a href="#what-to-do" data-transition="slide">What to Do If a Claim Happens</a></li>
-	<li><a href="#request-policy" data-transition="slide">Request a Policy Change</a></li>
-	<li><a href="#request-quote" data-transition="slide">Request a Quote</a></li>
+	<li><a href="#contact">Contact Us</a></li>
+	<li><a href="#request-certificate">Request a Certificate</a></li>
+	<li><a href="#report-claim">Report a Claim</a></li>
+	<li><a href="#what-to-do">What to Do If a Claim Happens</a></li>
+	<li><a href="#request-policy">Request a Policy Change</a></li>
+	<li><a href="#request-quote">Request a Quote</a></li>
 </ul>
 				
 	</div><!-- /content -->
@@ -64,6 +92,64 @@
 
 
 <!-----------------------------------------------------------------end home page----------------------------------------------------------->
+<!-------------------------------------------------------------------begin thanks dialog---------------------------------------------------->
+
+<div data-role="page" data-theme="b" data-add-back-btn="true" id="thanksDialog">
+
+	
+
+	<div data-role="content" >
+	
+	Thanks. We received your request.
+	
+	<a href="#home" data-role="button">Okay</a>
+	
+
+</div>
+</div>	
+
+
+
+
+<!-----------------------------------------------------------------end thanks dialog----------------------------------------------------------->
+
+<!---------------------------------------------------begin thanks page---------------------------------------------------------->
+
+<div data-role="page" data-theme="b" data-add-back-btn="true" id="thanks">
+
+	<div data-role="header">
+		<h1>Schantz Agency</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" class="auto-style1" >	
+				
+
+
+<div style="width:180px; margin-left:auto; margin-right:auto;">
+<img src="img/bg.png">
+</div>	
+
+<p><strong>Thanks. We received your request.</strong></p>
+	
+		
+<ul data-role="listview" data-inset="true" data-filter="false">
+
+
+	<li><a href="#contact">Contact Us</a></li>
+	<li><a href="#request-certificate">Request a Certificate</a></li>
+	<li><a href="#report-claim">Report a Claim</a></li>
+	<li><a href="#what-to-do">What to Do If a Claim Happens</a></li>
+	<li><a href="#request-policy">Request a Policy Change</a></li>
+	<li><a href="#request-quote">Request a Quote</a></li>
+</ul>
+				
+	</div><!-- /content -->
+
+</div><!-- /page -->
+
+
+<!-----------------------------------------------------------------end home page----------------------------------------------------------->
+
 
 
 
@@ -93,7 +179,7 @@ Jacksonville Beach , FL 32240-1591 <br>
 
 <br><br>
 
- <a data-role="button" data-icon="grid" href="tel:1-904-246-1018">Call Now</a>
+ <a data-role="button" data-icon="grid" href="tel:1-904-246-1018">Call Rob</a>
 
 
 <div style="height:1px; background-color:#CCCCCC; width:400px; float:left; margin:20px 0px 30px 0px;"></div>
@@ -113,7 +199,7 @@ Roswell, GA 30075 <br>
 	<br>
 <br>
 
-	 <a data-role="button" data-icon="grid"  href="tel:+1-678-592-7101">Call Now</a>
+	 <a data-role="button" data-icon="grid"  href="tel:+1-678-592-7101">Call John</a>
 
 
 
@@ -155,7 +241,7 @@ Roswell, GA 30075 <br>
 
 	<strong>Rob Schantz - Jacksonville Office</strong> <br>
 PO Box 51591 <br>
-Jacksonville Beach , FL 32240-1591 <br>
+Jacksonville Beach, FL 32240-1591 <br>
 
 	<strong>Phone: </strong> <a href="tel:1-904-246-1018">904-246-1018 </a><br>
 	<strong>Fax: </strong>904-246-5646 <br>
@@ -165,7 +251,7 @@ Jacksonville Beach , FL 32240-1591 <br>
 
 <br>
 
- <a data-role="button" data-icon="grid" href="tel:1-904-246-1018">Call Now</a>
+ <a data-role="button" data-icon="grid" href="tel:1-904-246-1018">Call Rob</a>
 
 
 
@@ -183,7 +269,7 @@ Roswell, GA 30075 <br>
 
 <br>
 
-	 <a data-role="button" data-icon="grid"  href="tel:+1-678-592-7101">Call Now</a>
+	 <a data-role="button" data-icon="grid"  href="tel:+1-678-592-7101">Call John</a>
 
 </div><!-- /content -->
 
@@ -258,7 +344,7 @@ Certificate or Additional Insured? <br><select name="whatRequesting" data-mini="
 
 <br>
 
-Your Name and/or you Company Name: <br><input type="text" name="actualName"/><br>
+Your Name and/or your Company Name: <br><input type="text" name="actualName"/><br>
 
 Your Email: <br><input type="text" name="email"/><br>
 
@@ -266,7 +352,11 @@ Certificate Holder Name: <br><input type="text" name="holderName"/><br>
 
 Certificate Holder Address: <br><textarea name="holderAddress"></textarea><br>
 
-Date of Event (if applicable): <br><input type="text" name="date"/><br>
+Date of Event (if applicable):<br>
+<input name="date" id="date" type="date" data-role="datebox" data-theme="b" 
+   data-options='{"mode": "calbox", "useFocus":true}'>
+
+
 
 <input id="hide" style="height:50px; font-size:1em;" type="button" value="submit" onClick="sendCert()"/>
 
@@ -295,10 +385,10 @@ if (whatRequesting==null || whatRequesting=="")
 return false;
 }
 
-
+*/
 
 if (actualName==null || actualName=="")
-{alert ("Please fill out your name");
+{apprise ("Please fill out your name");
 return false;
 }
 
@@ -307,9 +397,11 @@ var atpos=email.indexOf("@");
 var dotpos=email.lastIndexOf(".");
 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
   {
-  alert("Please enter a valid e-mail address");
+  apprise ("Please enter a valid e-mail address");
   return false;
   }
+
+/*
 
 
 if (holderName==null || holderName=="")
@@ -323,26 +415,6 @@ if (holderAddress==null || holderAddress=="")
 return false;
 }
 
-/*  
- $.get( 
- 
- "http://www.theschantzagency.com/app/get_form.php", {
- formName: formName, whatRequesting:whatRequesting, actualName:actualName, email: email, holderName:holderName, holderAddress:holderAddress, date:date},
-  
-
-
-
-$.ajax({
-			type: "GET",
-			url: "http://www.theschantzagency.com/app/test.php",
-			dataType: "jsonp",
-		
-			data: {formName: formName, whatRequesting:whatRequesting, actualName: actualName, email: email, holderName:holderName, holderAddress:holderAddress, date:date},
-         	success : function (response) {
-            alert("The server says: " + response);	        
-            }
-});
-         
 */
 
 
@@ -351,48 +423,20 @@ var req = $.ajax({
             url: "http://www.theschantzagency.com/app/get_form.php?callback=json_success",
             dataType: "jsonp",        
             data: {formName: formName, whatRequesting:whatRequesting, actualName: actualName, email: email, holderName:holderName, holderAddress:holderAddress, date:date},
-});
+}); 
 
-
-req.success(function() {
-    console.log('Yes! Success!');
-});
-
-req.error(function() {
-    console.log('Oh noes!');
-});
 
  
-    /*      
+} //end send form function
 
- alert('yeah!');
-
-*/
-
-
-//  alert ("Thank you. We received your request-----------------.");
-
-// window.location = "index.html";
-} //end of function
-
-function json_success(response) {
-   //  alert(response.result);
-   var response = (response.result);
-
- if (response == "success")
-  {
-  alert ("super job");
-  window.location = "index.html";
-  }
-
-
-   
-}
 
 
 
 
 </script>
+
+
+
 
 
 	</div><!--end content class-->
@@ -458,9 +502,12 @@ Your Name and/or Your Company Name: <br><input type="text" name="actualName"/><b
 
 Email: <br><input type="text" name="email"/><br>
 
-Effective date for change: <br><input type="text" name="date"/><br>
+Effective date for change: <br>
 
+<input name="date" id="date" type="date" data-role="datebox" data-theme="b" 
+   data-options='{"mode": "calbox", "useFocus":true}'>
 
+<br>
 
 
 <!------->
@@ -484,7 +531,7 @@ Are you adding a balloon?<br>
       <option value="yesBalloon">Yes</option>
   
 </Select>
-<div id="yesBalloon" class="colors" style="display:none"> Please provide the N Number <input type="text" name="nNumber" value="">  </div>
+<div id="yesBalloon" class="colors" style="display:none"> Please provide the N Number <input type="number" name="nNumber" value="">  </div>
 <br>
 
 <!---------->
@@ -554,7 +601,7 @@ var pilotAdd=document.forms ["policy"] ["pilotAdd"].value;
 var requestedChanges=document.forms ["policy"] ["requestedChanges"].value;
 
 if (actualName==null || actualName=="")
-{alert ("Please fill out your name");
+{apprise ("Please fill out your name");
 return false;
 }
 
@@ -563,32 +610,33 @@ var atpos=email.indexOf("@");
 var dotpos=email.lastIndexOf(".");
 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
   {
-  alert("Please enter a valid e-mail address");
+  apprise("Please enter a valid e-mail address");
   return false;
   }
+
+/*
 
 if (date==null || date=="")
 {alert ("Please fill out the requested effective date for the change");
 return false;
 }
+*/
 
-$(document).ready(function(){
-
-$.get( "http://www.theschantzagency.com/app/get_form.php", 
-{formName: formName, actualName: actualName, email: email, pilotAdd:pilotAdd, pilotName:pilotName, balloonAdd:balloonAdd, nNumber:nNumber, date:date, requestedChanges:requestedChanges});
-
- });
-
-
-alert ("Thank you. We received your request.");
+var req = $.ajax({
+            type: "GET",
+            url: "http://www.theschantzagency.com/app/get_form.php?callback=json_success",
+            dataType: "jsonp",        
+            data: {formName: formName, actualName: actualName, email: email, pilotAdd:pilotAdd, pilotName:pilotName, balloonAdd:balloonAdd, nNumber:nNumber, date:date, requestedChanges:requestedChanges},
+}); 
 
 
-
-window.location = "index.html";
+ 
+} //end send form function
 
 
 
-}
+
+
 </script>
 
 
@@ -653,15 +701,15 @@ Email: <br><input type="text" name="email"/><br>
 
 Your Location: <br><input type="text" name="location"/><br>
 
-Balloon Size: <br><input type="text" name="balloonSize"/><br>
+Balloon Size: <br><input type="number" name="balloonSize"/><br>
 
-Hours Per Year: <br><input type="text" name="hoursYear"/><br>
+Hours Per Year: <br><input type="number" name="hoursYear"/><br>
 
-Commercial (carrying paying passengers) hours per year: <br><input type="text" name="commercialHours"/><br>
+Commercial (carrying paying passengers) hours per year: <br><input type="number" name="commercialHours"/><br>
 
 
 
-How many PIC hours do you have?: <br><input type="text" name="picHours"/><br>
+How many PIC hours do you have?: <br><input type="number" name="picHours"/><br>
 
 
 
@@ -688,15 +736,18 @@ Any Hull Insurance on the balloon?<br>
       <option value="yes">Yes</option>
   
 </Select>
-<div id="yes" class="colors" style="display:none"> How much is the hull insurance? <input type="text" name="hullCost" value="$">  </div>
+<div id="yes" class="colors" style="display:none"> How much is the hull insurance? <input type="number" name="hullCost" value="$">  </div>
 
 
 <!---------->
 
 
 <br><br>
-Last Safety Seminar atttended: <br><input type="text" name="lastSeminar"/><br>
+Last Safety Seminar atttended: <br>
 
+<input name="date" id="date" type="date" data-role="datebox" data-theme="b" 
+   data-options='{"mode": "calbox", "useFocus":true}'>
+<br>
 
 
 
@@ -735,7 +786,7 @@ var currentCarrier=document.forms ["quote"] ["currentCarrier"].value;
 
 
 if (actualName==null || actualName=="")
-{alert ("Please fill out your name");
+{apprise ("Please fill out your name");
 return false;
 }
 
@@ -743,9 +794,12 @@ var atpos=email.indexOf("@");
 var dotpos=email.lastIndexOf(".");
 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
   {
-  alert("Please enter a valid e-mail address");
+  apprise("Please enter a valid e-mail address");
   return false;
   }
+
+
+/*
 
 if (location==null || location=="")
 {alert ("Please fill out your location");
@@ -758,32 +812,60 @@ return false;
 }
 
 
+formName: formName, actualName: actualName, email: email, location:location, balloonSize:balloonSize, hoursYear:hoursYear, commercialHours:commercialHours, picHours:picHours, hullInsurance:hullInsurance, hullCost:hullCost, lastSeminar:lastSeminar, currentCarrier:currentCarrier
+
+
 if (hoursYear==null || hoursYear=="")
 {alert ("Please enter the hours per year");
 return false;
 }
+*/
 
 
-$.get( "http://www.theschantzagency.com/app/get_form.php", {formName: formName, actualName: actualName, email: email, location:location, balloonSize:balloonSize, hoursYear:hoursYear, commercialHours:commercialHours, picHours:picHours, hullInsurance:hullInsurance, hullCost:hullCost, lastSeminar:lastSeminar, currentCarrier:currentCarrier});
+var req = $.ajax({
+            type: "GET",
+            url: "http://www.theschantzagency.com/app/get_form.php?callback=json_success",
+            dataType: "jsonp",        
+            data: {formName: formName, actualName: actualName, email: email, location:location, balloonSize:balloonSize, hoursYear:hoursYear, commercialHours:commercialHours, picHours:picHours, hullInsurance:hullInsurance, hullCost:hullCost, lastSeminar:lastSeminar, currentCarrier:currentCarrier},
+}); 
 
-alert ("Thank you. We received your message");
+
+ 
+} //end send form function
 
 
-window.location = "thanks.html"
+function json_success(response) {
+   //  alert(response.result);
+   var response = (response.result);
 
-}
+ if (response == "success")
+  {
+ //  alert ("Thanks. We received your request.");
+ 
+
+  apprise ("Thanks. We received your request.");
+  
+  
+  window.location = "#home";
+  
+  
+  }
+
+
+
+
+   
+} // end of json_success
+
+
+
 </script>
 
-<!--
- $(document).ready(function(){
-  $("#hide").click(function(){
-    $("#form").hide();
-  });
-  $("#hide").click(function(){
-    $("#thanks").show();
-  });
-});
--->
+
+
+
+
+
 
 </div><!-- end content class -->
 		
