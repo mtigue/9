@@ -62,12 +62,12 @@
 <ul data-role="listview" data-inset="true" data-filter="false">
 
 
-	<li><a href="#contact">Contact Us</a></li>
-	<li><a href="#request-certificate">Request a Certificate</a></li>
-	<li><a href="#report-claim">Report a Claim</a></li>
-	<li><a href="#what-to-do">What to Do If a Claim Happens</a></li>
-	<li><a href="#request-policy">Request a Policy Change</a></li>
-	<li><a href="#request-quote">Request a Quote</a></li>
+	<li><a href="#contact" data-transition="none">Contact Us</a></li>
+	<li><a href="#request-certificate" data-transition="none">Request a Certificate</a></li>
+	<li><a href="#report-claim" data-transition="none">Report a Claim</a></li>
+	<li><a href="#what-to-do" data-transition="none">What to Do If a Claim Happens</a></li>
+	<li><a href="#request-policy" data-transition="none">Request a Policy Change</a></li>
+	<li><a href="#request-quote" data-transition="none">Request a Quote</a></li>
 </ul>
 				
 	</div><!-- /content -->
@@ -76,65 +76,6 @@
 
 
 <!-----------------------------------------------------------------end home page----------------------------------------------------------->
-<!-------------------------------------------------------------------begin thanks dialog---------------------------------------------------->
-
-<div data-role="page" data-theme="b" data-add-back-btn="true" id="thanksDialog">
-
-	
-
-	<div data-role="content" >
-	
-	Thanks. We received your request.
-	
-	<a href="#home" data-role="button">Okay</a>
-	
-
-</div>
-</div>	
-
-
-
-
-<!-----------------------------------------------------------------end thanks dialog----------------------------------------------------------->
-
-<!---------------------------------------------------begin thanks page---------------------------------------------------------->
-
-<div data-role="page" data-theme="b" data-add-back-btn="true" id="thanks">
-
-	<div data-role="header">
-		<h1>Schantz Agency</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" class="auto-style1" >	
-				
-
-
-<div style="width:180px; margin-left:auto; margin-right:auto;">
-<img src="img/bg.png">
-</div>	
-
-<p><strong>Thanks. We received your request.</strong></p>
-	
-		
-<ul data-role="listview" data-inset="true" data-filter="false">
-
-
-	<li><a href="#contact">Contact Us</a></li>
-	<li><a href="#request-certificate">Request a Certificate</a></li>
-	<li><a href="#report-claim">Report a Claim</a></li>
-	<li><a href="#what-to-do">What to Do If a Claim Happens</a></li>
-	<li><a href="#request-policy">Request a Policy Change</a></li>
-	<li><a href="#request-quote">Request a Quote</a></li>
-</ul>
-				
-	</div><!-- /content -->
-
-</div><!-- /page -->
-
-
-<!-----------------------------------------------------------------end home page----------------------------------------------------------->
-
-
 
 
 <!-----------------------------------------------------------------contact us----------------------------------------------------------->
@@ -337,7 +278,7 @@ Certificate Holder Name: <br><input type="text" name="holderName"/><br>
 Certificate Holder Address: <br><textarea name="holderAddress"></textarea><br>
 
 Date of Event (if applicable):<br>
-<input name="date" id="date" type="date" data-role="datebox" data-theme="b" 
+<input name="date" id="date" type="date" data-role="datebox" data-theme="b" data-transition="none"
    data-options='{"mode": "calbox", "useFocus":true}'>
 
 
@@ -432,18 +373,6 @@ var req = $.ajax({
 
 <!-----------------------------------------------------------------end Request Certificate----------------------------------------------------------->
 
-<!------------------------------------------------------------------------test------------------------------------------>
-<div data-role="page" data-theme="b" data-add-back-btn="true" id="test">
-
-	<div data-role="header">
-		<h1>test</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-
-</div>
-</div>
-<!------------------------------------------------------------------------end test------------------------------------------>
 <!-----------------------------------------------------------------Request Policy Change----------------------------------------------------------->
 
 <div data-role="page" data-theme="b" data-add-back-btn="true" id="request-policy">
@@ -488,7 +417,7 @@ Email: <br><input type="text" name="email"/><br>
 
 Effective date for change: <br>
 
-<input name="date" id="date" type="date" data-role="datebox" data-theme="b" 
+<input name="date" id="date" type="date" data-role="datebox" data-transition="none" data-theme="b" 
    data-options='{"mode": "calbox", "useFocus":true}'>
 
 <br>
